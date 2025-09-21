@@ -49,7 +49,7 @@ const ContactForm=()=>{
 
     const postApiCall= async()=>{
         setApiStatus(apiStatusConstants.inProgress)
-        const url="http://localhost:5000/contacts/"
+        const url="https://contact-book-app-backend-3.onrender.com/contacts/"
         const contactDetails={name,email,phone}
         const options={
             method:"POST",
@@ -77,7 +77,7 @@ const ContactForm=()=>{
 
     const deleteApi=async(id)=>{
         setApiStatus(apiStatusConstants.inProgress)
-        const url=`http://localhost:5000/contacts/${id}`
+        const url=`https://contact-book-app-backend-3.onrender.com/contacts/${id}`
         const options={method:"DELETE"}
         try{
             const response= await fetch(url,options)
@@ -108,7 +108,7 @@ const ContactForm=()=>{
     const apiCall=async()=>{
         setApiStatus(apiStatusConstants.inProgress)
         try {
-            const responseData = await fetch("http://localhost:5000/contacts?page=1&limit=100") 
+            const responseData = await fetch("https://contact-book-app-backend-3.onrender.com/contacts?page=1&limit=100") 
             if (responseData.ok === true) {
                 const data = await responseData.json()
                 updateContactsList(data)

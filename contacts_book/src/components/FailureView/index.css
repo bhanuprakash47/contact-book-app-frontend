@@ -1,0 +1,14 @@
+.failure-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+
+.failure-container-heading{
+    font-family: "Roboto";
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+}
